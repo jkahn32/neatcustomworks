@@ -1,7 +1,8 @@
 body {
-  background-image: url('IMG_6268.jpg'); 
+  background-image: url('/jhkcustom/IMG_6268.jpg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 
