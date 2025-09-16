@@ -1,10 +1,12 @@
 body {
-  background-color: hotpink;
-  background-image: url('/jhkcustom/IMG_6268.jpg'); 
+  background-image: url('IMG_6268.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  height: 100vh;
+  margin: 0;
 }
+
 
 
 
