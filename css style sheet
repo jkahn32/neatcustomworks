@@ -1,5 +1,5 @@
-body {
-  background-image: url('IMG_6268.jpg');
+p {
+  background-image: url('IMG_6268.jpg')
 }
 
 
