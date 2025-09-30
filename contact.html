@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Neat Custom Works</title>
   <style>
     body {
@@ -173,6 +174,22 @@
     button[type="submit"]:hover {
       background-color: #555;
     }
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+  }
+
+    .social-icons a:hover {
+  color: #555;
+  }
 
 
    /* Mobile styles */
@@ -253,10 +270,23 @@
       <input type="email" id="email" name="email" placeholder="Your email" required>
 
       <label for="project">Message</label>
-      <textarea id="project" name="project" placeholder="Describe your project..." required></textarea>
+      <textarea id="project" name="project" placeholder="Tell me whats on your mind..." required></textarea>
 
       <button type="submit">Send</button>
     </form>
+
+  <div class="social-icons">
+    <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
   </div>
 
   <div>
