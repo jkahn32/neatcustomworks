@@ -22,7 +22,7 @@
     .top-banner {
       background-color: rgb(249, 247, 233);
       width: 100%;
-      padding: 10px 20px;
+      padding: 3px 20px;
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -31,6 +31,15 @@
       z-index: 100;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    .site-footer {
+      background-color: none;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      z-index: 50;
+      font-size: 0.9rem;
+      }
 
     /* Three sections inside banner */
     .banner-section {
@@ -80,13 +89,30 @@
 
     .bottom-logo {
       position: absolute;
-      bottom: 10px;
+      bottom: 60px;
       left: 50%;
       transform: translateX(-50%);
       width: 50px;
       height: auto;
       z-index: 10;
     }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
 
     /* Mobile styles */
     @media (max-width: 600px) {
@@ -125,33 +151,41 @@
 </head>
 <body>
 
-  <!-- Top banner with 3 sections -->
-  <div class="top-banner">
+  <body>
+  <div class="page-container">
 
-    <!-- Left: Products tab -->
-    <div class="banner-section left-nav nav">
-      <a href="products.html">Products</a>
+    <!-- Top banner with 3 sections -->
+    <div class="top-banner">
+      <div class="banner-section left-nav nav">
+        <a href="glasses.html">Glasses</a>
+        <a href="otherprojects.html">Other Projects</a>
+      </div>
+
+      <div class="banner-section center-logo">
+        <a href="index.html">
+          <img src="NeatCustomWorksLogo2.png" alt="Neat Custom Works Logo" class="logo" />
+        </a>
+      </div>
+
+      <div class="banner-section right-nav nav">
+        <a href="customworks.html">Custom Works</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
 
-    <!-- Center: Logo -->
-    <div class="banner-section center-logo">
-      <a href="index.html">
-        <img src="NeatCustomWorksLogo2.png" alt="Neat Custom Works Logo" class="logo" />
-      </a>
-    </div>
+    <!-- Main content area (could add more content here) -->
+    <div class="spacer"></div>
 
-    <!-- Right: Contact and Cart -->
-    <div class="banner-section right-nav nav">
-      <a href="contact.html">Contact</a>
-      <a href="cart.html" title="Cart">
-        <img src="GlencarinGlassWhite.png" alt="Cart" style="height: 24px; vertical-align: middle;" />
-      </a>
-    </div>
+    <!-- Bottom-center logo -->
+    <img src="jhk1.png" alt="Bottom Center Logo" class="bottom-logo" />
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      &copy; 2025 Neat Custom Works. All rights reserved.
+    </footer>
 
   </div>
-
-  <!-- Bottom-center logo -->
-  <img src="jhk1.png" alt="Bottom Center Logo" class="bottom-logo" />
+</body>
 
 </body>
 </html>
