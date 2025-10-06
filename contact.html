@@ -34,26 +34,23 @@
   <!-- Contact form -->
   <div class="contact-form-container">
     <h2>Get In Touch</h2>
-    <form action="https://formsubmit.co/jeff.kahn32@gmail.com" method="POST">
-
-      <!-- Disable CAPTCHA -->
+    <form action="https://formsubmit.co" method="POST">
+      <input type="hidden" name="email" value="jeff.kahn32@gmail.com">
       <input type="hidden" name="_captcha" value="false">
-
-      <!-- Redirect to thank-you page -->
       <input type="hidden" name="_next" value="thank-you.html">
 
-      <!-- Fields -->
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <input type="email" id="email" name="email" required>
 
       <label for="project">Message</label>
-      <textarea id="project" name="project" placeholder="Tell me whats on your mind..." required></textarea>
+      <textarea id="project" name="project" required></textarea>
 
       <button type="submit">Send</button>
     </form>
+
 
   <div class="social-icons">
     <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
