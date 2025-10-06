@@ -3,61 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome for consistency (can be removed if unused) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Your site styles -->
+  <link rel="stylesheet" href="styles.css" />
   <title>Thank You</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: #333;
-    }
-
-    .thank-you-box {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      max-width: 500px;
-    }
-
-    h1 {
-      color: #2e7d32;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #fff;
-      background-color: #333;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    a:hover {
-      background-color: #555;
-    }
-  </style>
 </head>
 <body>
-  <div class="thank-you-box">
-    <h1>Thank You!</h1>
-    <p>Your message has been sent successfully.</p>
-    <p>We’ll be in touch with you shortly.</p>
-    <a href="index.html">Return to Home</a>
+
+  <!-- Page container -->
+  <div class="page-container">
+
+    <!-- Top banner -->
+    <div class="top-banner">
+      <div class="banner-section left-nav nav">
+        <a href="glasses.html">Glasses</a>
+        <a href="otherprojects.html">Other Projects</a>
+      </div>
+
+      <div class="banner-section center-logo">
+        <a href="index.html">
+          <img src="NeatCustomWorksLogo2.png" alt="Neat Custom Works Logo" class="logo" />
+        </a>
+      </div>
+
+      <div class="banner-section right-nav nav">
+        <a href="customworks.html">Custom Works</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Thank you message -->
+    <div class="contact-form-container">
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully. We'll be in touch soon.</p>
+      <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+    <!-- Spacer -->
+    <div class="spacer"></div>
+
+    <!-- Bottom logo -->
+    <img src="jhk1.png" alt="Bottom Center Logo" class="bottom-logo" />
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      &copy; 2025 Neat Custom Works. All rights reserved.
+    </footer>
+    
   </div>
+
 </body>
 </html>
