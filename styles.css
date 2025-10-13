@@ -1,4 +1,4 @@
-body {
+html, body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-image: url('Rickhouse.jpeg');
@@ -8,7 +8,7 @@ body {
       min-height: 100vh;
       color: #fff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-      position: relative;
+      position: fixed;
     }
 
     /* Top banner layout */
@@ -33,7 +33,6 @@ body {
       font-size: 0.9rem;
       }
 
-      
 
     /* Three sections inside banner */
     .banner-section {
