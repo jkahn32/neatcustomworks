@@ -96,6 +96,23 @@ html, body {
       padding: 0;
     }
 
+    /* Mobile viewport height fix: use dynamic viewport units when supported */
+    :root {
+      /* --vh will be 1% of the viewport height as reported by JS if needed. */
+      --vh: 1vh;
+    }
+
+    /* Apply background to full viewport using min-height and dynamic units */
+    html, body {
+      /* prefer dynamic viewport height; fallback to 100vh */
+      min-height: calc(var(--vh, 1vh) * 100);
+    }
+
+    /* Avoid background-attachment: fixed on mobile (iOS Safari ignores it and causes gaps) */
+    html, body {
+      background-attachment: scroll;
+    }
+
     .page-container {
       display: flex;
       flex-direction: column;
