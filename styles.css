@@ -326,34 +326,68 @@ body {
 
     /* Mobile styles */
     @media (max-width: 600px) {
-      .top-banner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
+  /* Stack the banner sections vertically */
+  .top-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-      .banner-section {
-        justify-content: center !important;
-        margin-bottom: 10px;
-      }
+  /* Make each banner section take full width and stack */
+  .banner-section {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-      .logo {
-        width: 200px;
-      }
+  /* Make nav links stack vertically */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 
-      .nav {
-        flex-direction: column;
-        align-items: center;
-      }
+  .nav a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    margin: 0;
+    width: auto;
+  }
 
-      .nav a {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
-        margin-left: 0;
-        margin-bottom: 6px;
-      }
+  /* Logo scaling */
+  .logo {
+    max-width: 80%;
+    height: auto;
+  }
 
-      .bottom-logo {
-        width: 50px;
-      }
-    }
+  /* Bottom logo repositioning */
+  .bottom-logo {
+    position: static;
+    margin: 20px auto;
+    display: block;
+    width: 50px;
+  }
+
+  /* Reduce padding and spacing for small screens */
+  body {
+    padding: 0 10px;
+  }
+
+  /* Container adjustments for all sections */
+  .glassware-container,
+  .contact-form-container,
+  .other-projects-container {
+    margin: 40px auto 20px auto;
+    padding: 15px;
+  }
+
+  /* Under construction message responsiveness */
+  .under-construction {
+    font-size: 1.8rem;
+    padding: 20px;
+  }
+}
