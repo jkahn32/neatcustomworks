@@ -1,36 +1,3 @@
- /* Mobile styles */
-    @media (max-width: 600px) {
-      .top-banner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .banner-section {
-        justify-content: center !important;
-        margin-bottom: 10px;
-      }
-
-      .logo {
-        width: 200px;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .nav a {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
-        margin-left: 0;
-        margin-bottom: 6px;
-      }
-
-      .bottom-logo {
-        width: 50px;
-      }
-    }
 body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -58,7 +25,6 @@ body {
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .site-footer {
-      background-color: none;
       color: #fff;
       text-align: center;
       padding: 1rem;
@@ -66,6 +32,8 @@ body {
       z-index: 50;
       font-size: 0.9rem;
       }
+
+      
 
     /* Three sections inside banner */
     .banner-section {
@@ -138,6 +106,39 @@ body {
     .spacer {
       flex: 1;
     }
+
+     /* Container Glassware Page */
+    .glassware-container {
+      background-color: rgb(249, 247, 233);
+      color: #333;
+      max-width: 900px;
+      width: 95%;
+      margin: 80px auto 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .glassware-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Container Other Projects Page */
+    .other-projects-container {
+      background-color: rgb(249, 247, 233);
+      color: #333;
+      max-width: 900px;
+      width: 95%;
+      margin: 80px auto 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .other-projects-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
      /* Contact Form Container for contact page */
     .contact-form-container {
       background-color: rgb(249, 247, 233);
@@ -323,4 +324,36 @@ body {
       margin-right: auto;
     }
 
-   
+    /* Mobile styles */
+    @media (max-width: 600px) {
+      .top-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .banner-section {
+        justify-content: center !important;
+        margin-bottom: 10px;
+      }
+
+      .logo {
+        width: 200px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+        margin-left: 0;
+        margin-bottom: 6px;
+      }
+
+      .bottom-logo {
+        width: 50px;
+      }
+    }
