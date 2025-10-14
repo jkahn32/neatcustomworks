@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CustomWorks</title>
+  <title>OtherProjects</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <div class="page-container">
+    
 
-    <!-- Top banner -->
+    <!-- Top banner with 3 sections -->
     <div class="top-banner">
       <div class="banner-section left-nav nav">
         <a href="glassware.html">Glassware</a>
@@ -29,28 +31,31 @@
       </div>
     </div>
 
+    <!-- Examples of other projects -->
+    <div class="other-projects-container">
+        <h2>Other Projects</h2>
+            
+            <table class="project-table" aria-label="Other Project Ideas">
+              <caption class="sr-only">Other Project Ideas</caption>
+              <tbody>
+                <tr><th>Material</th><td>Item</td></tr>
+                <tr><th>Wood</th><td>Custom Cutting Boards</td></tr>
+                <tr><th>Wood & Leather</th><td>Custom Coasters</td></tr>
+                <tr><th>Wood</th><td>Custom Serving Trays</td>
+                <tr><th>Leather</th><td>Custom Wallets</td></tr>
+                <tr><th>Leather</th><td>Custom Baseballs & Footballs</td></tr>
+                <tr><th>Leather & Silicon</th><td>Custom Phone Cases</td></tr>
+              </tbody>
+            </table>
 
-    <!-- Contact Form Container (same as Contact page) -->
-    <div class="contact-form-container">
-      <h2>Interested in a Custom Project?</h2>
-      <form action="https://formsubmit.co/jeff.kahn32@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://jkahn32.github.io/neatcustomworks/thank-you.html">
+            <div class="project">
+              <img src="filetboard.png" alt="Filet Board" class="Custom-Filet-Board" />
+              <h3>Custom Filet Board</h3>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-
-        <label for="project">Tell me more about your custom project</label>
-        <textarea id="project" name="project" placeholder="Describe your custom project..." required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
     </div>
+  </div>
 
-    <!-- Spacer -->
+  <!-- Spacer to push footer to bottom -->
     <div class="spacer"></div>
 
     <!-- Bottom-center logo -->
