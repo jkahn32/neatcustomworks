@@ -90,25 +90,36 @@ html, body {
       z-index: 10;
       display: block;
     }
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+
+    /* Left-side hero image */
+    .hero-side-image {
+      position: fixed; 
+      right: -420px; /* start off-screen to the right */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 800px; /* default desktop size */
+      max-width: 40vw;
+      height: auto;
+      z-index: 20;
+      border-radius: 8px;
+      transition: right 700ms cubic-bezier(.2,.8,.2,1), opacity 700ms ease;
+      opacity: 0;
     }
 
-    /* Mobile viewport height fix: use dynamic viewport units when supported */
+    .hero-side-image.in-view {
+      right: 20px;
+      transform: translateY(-50%) translateX(0);
+      opacity: 1;
+    }
+
     :root {
-      /* --vh will be 1% of the viewport height as reported by JS if needed. */
       --vh: 1vh;
     }
 
-    /* Apply background to full viewport using min-height and dynamic units */
     html, body {
-      /* prefer dynamic viewport height; fallback to 100vh */
       min-height: calc(var(--vh, 1vh) * 100);
     }
 
-    /* Avoid background-attachment: fixed on mobile (iOS Safari ignores it and causes gaps) */
     html, body {
       background-attachment: scroll;
     }
@@ -124,20 +135,84 @@ html, body {
       flex: 1;
     }
 
-     /* Container Glassware Page */
+    /* Container Glassware Page */
     .glassware-container {
       background-color: rgb(249, 247, 233);
       color: #333;
       max-width: 900px;
       width: 95%;
-      margin: 80px auto 40px auto;
-      padding: 30px;
+      margin: 60px auto 30px auto; 
+      padding: 20px; 
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .glassware-container h2 {
       text-align: center;
       margin-bottom: 20px;
+    }
+    
+
+    /* Glencairn gallery */
+    .glencarins {
+      display: flex;
+      gap: 12px; 
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap; 
+      margin-top: 12px;
+    }
+
+    .glencairn-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      flex: 0 1 140px; 
+      max-width: 160px;
+      padding: 6px;
+    }
+
+    .glencairn-item h3 {
+      margin-top: 10px;
+      text-align: center;
+      color: #333;
+      font-size: 1.05rem;
+    }
+
+    .glencairn-img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    .glencairn-item h3 {
+      margin-top: 8px;
+      text-align: center;
+      color: #333;
+      font-size: 1rem; 
+    }
+
+    
+    .glassware-container + h2 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    .glassware-container + h2 + ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 24px auto;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .glassware-container + h2 + ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      color: #fff; 
     }
 
     /* Container Other Projects Page */
@@ -155,6 +230,46 @@ html, body {
       text-align: center;
       margin-bottom: 20px;
     }
+        /* Filet board image sizing */
+        .Custom-Filet-Board {
+          display: block;
+          width: 320px;
+          max-width: 100%;
+          height: auto;
+          margin: 12px 18px 12px 0; /* left-aligned: top right bottom left */
+          border-radius: 6px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        /* Project table floated to the right on larger screens */
+        .project-table {
+          float: right;
+          margin: 0px 18px 12px; /* Top is now 0 to move it up */
+          border-collapse: collapse;
+          width: 320px;
+          background: #f9f7e9;
+          color: #333;
+          border-radius: 6px;
+          overflow: hidden;
+          position: relative;
+          top: -20px; /* Move table up inside the container */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-table th,
+        .project-table td {
+          padding: 8px 10px;
+          text-align: center;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .project-table th {
+          font-weight: 700;
+          width: 40%;
+          background: rgba(0, 0, 0, 0.03);
+        }
+
+
 
      /* Contact Form Container for contact page */
     .contact-form-container {
@@ -292,21 +407,6 @@ html, body {
       background-color: #555;
     }
 
-    /* Under construction message styling */
-    .under-construction {
-      text-align: center;
-      font-size: 2.5rem;            
-      font-weight: bold;
-      margin: 40px 20px;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
-      background-color: rgba(0, 0, 0, 0.6); 
-      padding: 30px 20px;
-      border-radius: 12px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
 
     /* Mobile styles */
     @media (max-width: 600px) {
@@ -340,4 +440,61 @@ html, body {
       .bottom-logo {
         width: 50px;
       }
+
+      /* On small screens move hero image inline and reduce size */
+      .hero-side-image {
+        position: static;
+        display: block;
+        margin: 20px auto;
+        width: 85%;
+        max-width: 360px;
+        transform: none;
+      }
+
+      /* Left hero image stacks on mobile and becomes visible inline */
+      .hero-left-image {
+        position: static;
+        display: block;
+        margin: 12px auto;
+        width: 85%;
+        max-width: 360px;
+        left: auto;
+        transform: none;
+        opacity: 1;
+      }
+
+      .contact-form-container {
+        width: 90%;            
+        max-width: 420px;      
+        margin: 30px auto;     
+        padding: 18px;         
+        box-sizing: border-box;
+      }
+
+      .contact-form-container h2 {
+        font-size: 1.25rem;
+      }
+
+      .contact-form-container input[type="text"],
+      .contact-form-container input[type="email"],
+      .contact-form-container textarea {
+        font-size: 0.95rem;
+      }
+
+      /* Mobile: center the filet board image and stack text underneath */
+      .Custom-Filet-Board {
+        margin: 12px auto;
+        width: 85%;
+        max-width: 360px;
+      }
+
+      /* Mobile: project-table becomes full-width and stacks */
+      .project-table {
+        float: none;
+        width: 100%;
+        margin: 12px 0;
+        position: static;
+        top: 0;
+      }
+
     }
