@@ -33,7 +33,10 @@
     <div class="spacer"></div>
 
     <!-- Bottom-center logo -->
-    <img src="jhk1.png" alt="Bottom Center Logo" class="bottom-logo" />
+    <img src="potstillduck.png" alt="Bottom Center Logo" class="bottom-logo" />
+
+  <!-- Right-side hero image (will slide from right to left and land on the left side) -->
+  <img src="CustomizeyourwhiskeyexperienceW.png" alt="Customize Your Whiskey Experience" class="hero-side-image" />
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -41,7 +44,16 @@
     </footer>
 
   </div>
-</body>
 
+  <script>
+    // Slide-in right hero image from right to left on load (works on mobile and desktop)
+    document.addEventListener('DOMContentLoaded', function () {
+      // small delay to allow CSS to initialize
+      setTimeout(function() {
+        var right = document.querySelector('.hero-side-image');
+        if (right) right.classList.add('in-view');
+      }, 120);
+    });
+  </script>
 </body>
 </html>
