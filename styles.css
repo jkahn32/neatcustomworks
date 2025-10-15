@@ -497,4 +497,13 @@ html, body {
         top: 0;
       }
 
+      /* Mobile: make the other-projects container narrower and centered */
+      .other-projects-container {
+        width: 90%;            /* take most of the viewport but leave breathing room */
+        max-width: 420px;      /* limit max width on phones */
+        margin: 30px auto;     /* center horizontally and reduce top margin */
+        padding: 18px;         /* reduce padding for small screens */
+        box-sizing: border-box;
+      }
+
     }
