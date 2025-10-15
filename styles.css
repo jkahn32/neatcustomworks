@@ -521,18 +521,17 @@ html, body {
         top: 0;
       }
 
-      /* add extra space between the bottom logo and the main container on mobile */
+      /* place the bottom logo in normal flow on mobile so footer sits below it */
       .bottom-logo {
-        position: absolute;
-        bottom: 20px; /* move it lower on mobile for more gap */
-        left: 50%;
-        transform: translateX(-50%);
+        position: static;
+        display: block;
+        margin: 12px auto 8px auto;
         width: 48px;
       }
 
-      /* reserve space at the bottom so the logo doesn't overlap content */
+      /* clear extra bottom padding on mobile now that logo is in-flow */
       .page-container {
-        padding-bottom: 100px; /* room for bottom logo on smaller viewports */
+        padding-bottom: 0;
         box-sizing: border-box;
       }
 
