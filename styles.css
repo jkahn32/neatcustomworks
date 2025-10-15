@@ -451,6 +451,12 @@ html, body {
         transform: none;
       }
 
+      /* Nudge the hero down on the index page only to avoid overlap with banner */
+      .index-page .hero-side-image {
+        /* increase spacing from top specifically on index page mobile */
+        margin-top: 40px; /* adjust value as needed (20-60px) */
+      }
+
       /* Left hero image stacks on mobile and becomes visible inline */
       .hero-left-image {
         position: static;
