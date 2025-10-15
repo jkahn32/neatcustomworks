@@ -95,7 +95,7 @@ html, body {
     .hero-side-image {
       position: fixed; 
       right: -420px; /* start off-screen to the right */
-      top: 50%;
+      top: 65%; /* moved down from 50% to lower the image on the page */
       transform: translateY(-50%);
       width: 800px; /* default desktop size */
       max-width: 40vw;
@@ -503,11 +503,6 @@ html, body {
         margin: 30px auto;
         padding: 18px;
         box-sizing: border-box;
-      }
-
-      /* mobile has more vertical space */
-      .page-container {
-        min-height: calc(var(--vh, 1vh) * 130); /* ~130vh on mobile */
       }
 
     }
