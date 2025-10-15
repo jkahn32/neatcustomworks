@@ -480,15 +480,23 @@ html, body {
       .contact-form-container textarea {
         font-size: 0.95rem;
       }
-          
-      /* Mobile: make the other-projects container narrower and centered */
+      
+      /* other-projects container narrower and centered */
       .other-projects-container {
-        width: 90%;            /* take most of the viewport but leave breathing room */
-        max-width: 420px;      /* limit max width on phones */
-        margin: 30px auto;     /* center horizontally and reduce top margin */
-        padding: 18px;         /* reduce padding for small screens */
+        width: 90%;            
+        max-width: 420px;      
+        margin: 30px auto;     
+        padding: 18px;         
         box-sizing: border-box;
       }
+
+      /* center the project caption  */
+      .other-projects-container .project h3 {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+    }
 
       /* Mobile: center the filet board image and stack text underneath */
       .Custom-Filet-Board {
@@ -506,4 +514,4 @@ html, body {
         top: 0;
       }
 
-    }
+      
