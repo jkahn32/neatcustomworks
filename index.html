@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-  <body>
+  <body class="index-page">
   <div class="page-container">
 
     <!-- Top banner with 3 sections -->
@@ -54,6 +54,20 @@
         if (right) right.classList.add('in-view');
       }, 120);
     });
+  </script>
+  <script>
+    // Ensure we can reliably target mobile layout from CSS.
+    (function(){
+      function applyMobileFlag(){
+        if (window.matchMedia && window.matchMedia('(max-width:600px)').matches) {
+          document.body.classList.add('mobile-hero-inline');
+        } else {
+          document.body.classList.remove('mobile-hero-inline');
+        }
+      }
+      applyMobileFlag();
+      window.addEventListener('resize', applyMobileFlag);
+    })();
   </script>
 </body>
 </html>
