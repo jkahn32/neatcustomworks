@@ -496,16 +496,25 @@ html, body {
         margin-top: 10px;
       }
 
+      /* glassware contianer narrower and centered */
+      .glassware-container {
+        width: 90%;
+        max-width: 420px;
+        margin: 30px auto;
+        padding: 18px;
+        box-sizing: border-box;
+      }
+
     }
 
-      /* Mobile: center the filet board image and stack text underneath */
+      /* center the filet board image and stack text underneath */
       .Custom-Filet-Board {
         margin: 12px auto;
         width: 85%;
         max-width: 360px;
       }
 
-      /* Mobile: project-table becomes full-width and stacks */
+      /* project-table becomes full-width and stacks */
       .project-table {
         float: none;
         width: 100%;
