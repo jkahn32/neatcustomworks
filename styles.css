@@ -449,8 +449,8 @@ html, body {
         width: 85%;
         max-width: 360px;
         transform: none;
-        /* push the hero down on small screens so it doesn't sit at the very top */
-        margin-top: 12vh;
+  /* push the hero down slightly on small screens */
+  margin-top: 6vh;
       }
 
       /* Left hero image stacks on mobile and becomes visible inline */
@@ -463,8 +463,8 @@ html, body {
         left: auto;
         transform: none;
         opacity: 1;
-        /* give the left hero additional top spacing on mobile */
-        margin-top: 10vh;
+  /* give the left hero a small top spacing on mobile */
+  margin-top: 5vh;
       }
 
       /* Ensure JS-added "in-view" desktop styles don't override mobile layout */
@@ -473,7 +473,7 @@ html, body {
         transform: none; /* cancel translateY(-50%) from desktop */
         right: auto;      /* ignore desktop 'right' placement */
         opacity: 1;       /* make sure it's visible when inline */
-        margin-top: 10vh; /* keep it pushed down on mobile */
+        margin-top: 6vh;  /* small offset on mobile */
       }
 
       .contact-form-container {
