@@ -443,37 +443,37 @@ html, body {
 
       /* On small screens move hero image inline and reduce size */
       .hero-side-image {
-        position: static;
-        display: block;
-        margin: 20px auto;
-        width: 85%;
-        max-width: 360px;
-        transform: none;
-  /* push the hero down slightly on small screens */
-  margin-top: 6vh;
+        position: static !important;
+        display: block !important;
+        margin: 20px auto !important;
+        width: 85% !important;
+        max-width: 360px !important;
+        transform: none !important;
+        /* push the hero down slightly on small screens */
+        margin-top: 6vh !important;
       }
 
       /* Left hero image stacks on mobile and becomes visible inline */
       .hero-left-image {
-        position: static;
-        display: block;
-        margin: 12px auto;
-        width: 85%;
-        max-width: 360px;
-        left: auto;
-        transform: none;
-        opacity: 1;
-  /* give the left hero a small top spacing on mobile */
-  margin-top: 5vh;
+        position: static !important;
+        display: block !important;
+        margin: 12px auto !important;
+        width: 85% !important;
+        max-width: 360px !important;
+        left: auto !important;
+        transform: none !important;
+        opacity: 1 !important;
+        /* give the left hero a small top spacing on mobile */
+        margin-top: 5vh !important;
       }
 
       /* Ensure JS-added "in-view" desktop styles don't override mobile layout */
       .hero-side-image.in-view,
       .hero-left-image.in-view {
-        transform: none; /* cancel translateY(-50%) from desktop */
-        right: auto;      /* ignore desktop 'right' placement */
-        opacity: 1;       /* make sure it's visible when inline */
-        margin-top: 6vh;  /* small offset on mobile */
+        transform: none !important; /* cancel translateY(-50%) from desktop */
+        right: auto !important;      /* ignore desktop 'right' placement */
+        opacity: 1 !important;       /* make sure it's visible when inline */
+        margin-top: 6vh !important;  /* small offset on mobile */
       }
 
       .contact-form-container {
@@ -510,4 +510,18 @@ html, body {
         top: 0;
       }
 
+    }
+
+    /* Fallback: body class set by JS to force mobile hero layout when media query doesn't take effect */
+    body.mobile-hero-inline .hero-side-image,
+    body.mobile-hero-inline .hero-left-image {
+      position: static !important;
+      display: block !important;
+      margin: 12px auto !important;
+      width: 85% !important;
+      max-width: 360px !important;
+      transform: none !important;
+      right: auto !important;
+      opacity: 1 !important;
+      margin-top: 6vh !important;
     }
