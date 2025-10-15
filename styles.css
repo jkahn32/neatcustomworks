@@ -95,7 +95,7 @@ html, body {
     .hero-side-image {
       position: fixed; 
       right: -420px; /* start off-screen to the right */
-      top: 65%; /* moved down from 50% to lower the image on the page */
+      top: 50%;
       transform: translateY(-50%);
       width: 800px; /* default desktop size */
       max-width: 40vw;
@@ -445,7 +445,7 @@ html, body {
       .hero-side-image {
         position: static;
         display: block;
-        margin: 36px auto 20px; /* increased top margin to nudge image down on mobile */
+        margin: 20px auto;
         width: 85%;
         max-width: 360px;
         transform: none;
