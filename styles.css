@@ -505,6 +505,11 @@ html, body {
         box-sizing: border-box;
       }
 
+      /* mobile has more vertical space */
+      .page-container {
+        min-height: calc(var(--vh, 1vh) * 130); /* ~130vh on mobile */
+      }
+
     }
 
       /* center the filet board image and stack text underneath */
