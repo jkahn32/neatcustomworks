@@ -473,7 +473,7 @@ html, body {
         transform: none; /* cancel translateY(-50%) from desktop */
         right: auto;      /* ignore desktop 'right' placement */
         opacity: 1;       /* make sure it's visible when inline */
-        margin-top: 12vh; /* keep it pushed down on mobile */
+        margin-top: 10vh; /* keep it pushed down on mobile */
       }
 
       .contact-form-container {
