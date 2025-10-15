@@ -236,7 +236,7 @@ html, body {
           width: 320px;
           max-width: 100%;
           height: auto;
-          margin: 12px 18px 12px 0; /* left-aligned: top right bottom left */
+          margin: 12px 18px 12px 0; 
           border-radius: 6px;
           box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
@@ -244,7 +244,7 @@ html, body {
         /* Project table floated to the right on larger screens */
         .project-table {
           float: right;
-          margin: 0px 18px 12px; /* Top is now 0 to move it up */
+          margin: 0px 18px 12px; 
           border-collapse: collapse;
           width: 320px;
           background: #f9f7e9;
@@ -252,7 +252,7 @@ html, body {
           border-radius: 6px;
           overflow: hidden;
           position: relative;
-          top: -20px; /* Move table up inside the container */
+          top: -20px; 
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -449,6 +449,8 @@ html, body {
         width: 85%;
         max-width: 360px;
         transform: none;
+        /* push the hero down on small screens so it doesn't sit at the very top */
+        margin-top: 12vh;
       }
 
       /* Left hero image stacks on mobile and becomes visible inline */
@@ -461,6 +463,8 @@ html, body {
         left: auto;
         transform: none;
         opacity: 1;
+        /* give the left hero additional top spacing on mobile */
+        margin-top: 10vh;
       }
 
       .contact-form-container {
