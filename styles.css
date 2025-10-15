@@ -467,6 +467,15 @@ html, body {
         margin-top: 10vh;
       }
 
+      /* Ensure JS-added "in-view" desktop styles don't override mobile layout */
+      .hero-side-image.in-view,
+      .hero-left-image.in-view {
+        transform: none; /* cancel translateY(-50%) from desktop */
+        right: auto;      /* ignore desktop 'right' placement */
+        opacity: 1;       /* make sure it's visible when inline */
+        margin-top: 12vh; /* keep it pushed down on mobile */
+      }
+
       .contact-form-container {
         width: 90%;            
         max-width: 420px;      
