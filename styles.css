@@ -523,10 +523,13 @@ html, body {
 
       /* place the bottom logo in normal flow on mobile so footer sits below it */
       .bottom-logo {
-        position: static;
         display: block;
-        margin: 12px auto 8px auto;
-        width: 48px;
+        position: static;
+        margin: 20px auto 20px auto; /* Space from hero image */
+        width: 85%;
+        max-width: 240px; /* Or whatever size works for mobile */
+        transform: none;
+        z-index: 1;
       }
 
       /* clear extra bottom padding on mobile now that logo is in-flow */
