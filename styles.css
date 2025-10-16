@@ -527,7 +527,7 @@ html, body {
         position: static;
         margin: 20px auto 20px auto; /* Space from hero image */
         width: 85%;
-        max-width: 68px; /* Or whatever size works for mobile */
+        max-width: 50px; /* Or whatever size works for mobile */
         transform: none;
         z-index: 1;
       }
