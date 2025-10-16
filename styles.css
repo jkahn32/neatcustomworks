@@ -522,7 +522,7 @@ html, body {
       }
 
       /* place the bottom logo in normal flow on mobile so footer sits below it */
-      .bottom-logo {
+      .potstillduck-image {
         display: block;
         position: static;
         margin: 20px auto 20px auto; /* Space from hero image */
