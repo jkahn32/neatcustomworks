@@ -445,7 +445,7 @@ html, body {
       .hero-side-image {
         position: static;
         display: block;
-        margin: 140px auto 20px auto;
+        margin: 200px auto 20px auto;
         width: 85%;
         max-width: 360px;
         transform: none;
